@@ -8,17 +8,17 @@ router.get("/", function(req, res){
         var hbsObject = {
             burger: data
           };
-          console.log(hbsObject);
+          //console.log(hbsObject);
           res.render("index", hbsObject);
         });
          
 });
 
 router.post("/api/burger", function(req,res){
-
+    console.log(req.body);
     burger.create([req.body.burger_name, req.body.devoured], function(result){
         //send back the id of the new burger
-        console.log(`${req.body.burger} added!`)
+        console.log(`${req.body.burger_name} added!`)
         res.json({id: result.insertId});
     });
 });
@@ -26,7 +26,7 @@ router.post("/api/burger", function(req,res){
 router.put("/api/burger/:id", function(req,res){
     const condition = "id = " + req.params.id;
 
-    console.log("condition", condition);
+    //console.log("condition", condition);
     const eaten = {devoured: 1}
     burger.update(eaten, condition, function(result) {
         if (result.changedRows === 0) {

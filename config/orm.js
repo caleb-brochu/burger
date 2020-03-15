@@ -21,8 +21,8 @@ const orm = {
 
     },
     updateOne: function(tableName, obj, condition, cb){
-        console.log(obj);
-        console.log(obj.devoured)
+        // console.log(obj);
+        // console.log(obj.devoured)
         let queryString = `UPDATE ` + tableName;
         queryString += ` SET devoured = ${obj.devoured} WHERE ${condition}`;
 

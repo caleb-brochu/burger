@@ -1,11 +1,11 @@
-  console.log("js running")
+
 $(function(){   
     $(".add_burger").on("submit", function(event) {
         // Make sure to preventDefault on a submit event.
 
         event.preventDefault();
 
-        console.log($("#burg").val().trim())
+        //console.log($("#burg").val().trim())
         const newBurger = {
         burger_name: $("#burg").val().trim(),
         devoured: 0
