@@ -1,0 +1,47 @@
+button{
+    display: inline;
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px;
+}
+.not_eaten{
+    width: auto;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.eaten{
+    width: auto;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+h2{
+    text-align: center;
+}
+.form-group {
+    display: inline-block;
+}
+
+.add_burger{
+    text-align: center;
+    margin: 5px;
+}
+.burgers-eaten{
+    
+    text-align: left;
+    padding: 5px;
+}
+.burgers-to-eat{
+    display: inline-flex;
+    text-align: right;
+    padding: 5px;
+}
+.devoure{
+    display: inline-flex;
+    align-items: flex-end;
+}

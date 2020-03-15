@@ -1,33 +1,40 @@
-<h1>Burgers!</h1>
+<h1 class ="text-center"><i class="fas fa-hamburger"></i> Burgers!</h1>
 
-<h2>Burgers to Eat!</h2>
 
-<form >
-    <input type = "text" class = "new_burger">
-    <button class = "add_burger">Make Burger!</button>
+<form class="add_burger">
+
+  <div class="form-group">
+    <label for="burg">Add a Burger:</label>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+  <button type="submit">Add Burger</button>
 </form>
 
 <div class = "container">
     <div class = "row">
        <div class = "col-md-6">
             <div class ="not_eaten">
+                <h2>Not Eaten</h2>
                 {{#each burger}}
-                    {{#unless devouered}}
-                        <div class = "burgers">
+                    {{#unless devoured}}
+                        <div class = "burgers-to-eat">
                         
                             {{id}}: {{burger_name}}
                             
                         </div>
                         <button class = "devoure" data-id = '{{id}}'>Devoure!</button>
                     {{/unless}}
+                    <br>
                 {{/each}}
+                
             </div>
         </div>
         <div class = "col-md-6">
             <div class ="eaten">
+                <h2>Eaten</h2>
                 {{#each burger}}
-                    {{#if devouered}}
-                        <div class = "burgers">
+                    {{#if devoured}}
+                        <div class = "burgers-eaten">
                             {{id}}: {{burger_name}}
                         </div>
                     {{/if}}
